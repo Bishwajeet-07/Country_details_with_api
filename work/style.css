@@ -1,0 +1,200 @@
+:root{
+    --backgourndcolor: rgb(8, 15, 30);
+    --textcolor: white;;
+    --cardcolor: rgba(163, 163, 163, 0.084);
+    --lightcolor: rgba(3, 44, 72, 0.491);
+    --shadowcolor:  rgba(255, 255, 255, 0.285);
+    --cardtextcolor: rgb(168, 168, 168);
+    --whitecolor:#000000;
+    --regioncolor: rgb(5, 0, 0);
+    --regiontextcolor: yellow;
+}
+.dark_theme{
+    --backgourndcolor: rgba(255, 254, 215, 0.377);;
+    --textcolor: black;;
+    --cardcolor: rgba(71, 71, 71, 0.078);
+    --lightcolor: rgba(32, 32, 32, 0.082);
+    --shadowcolor:  rgba(0, 0, 0, 0.285);
+    --cardtextcolor: rgb(26, 35, 54);
+    --whitecolor:#ffffff;
+    --regioncolor: rgb(7, 242, 113);
+    --regiontextcolor: rgba(0, 0, 0, 0.861);
+
+
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--textcolor);
+    background-color: var(--backgourndcolor);
+    margin: 1rem;
+    font-family: "Nunito";
+}
+
+/* navbar */
+
+.navbar{
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lightcolor);
+    padding: 10px;
+    color: inherit;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 5px 0px var(--shadowcolor);
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--textcolor);
+}
+.navbar .dark_mode{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* main */
+
+.input_field{
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_field .option_block{
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+.input_field .input_search{
+    border: none;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.input_field .input_icon{
+    outline: none;
+    border: none;
+    color: var(--whitecolor) ;
+    background-color: var(--textcolor);
+    /* background-color: red; */
+}
+
+.input_field select{
+    background-color: var(--whitecolor);
+    color: var(--textcolor);
+}
+
+
+
+.main{
+    margin-top: 20px;
+}
+.fix_width{
+    max-width: 1220px;
+    margin-inline: auto;
+}
+
+.head{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+}
+.countries{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--textcolor);
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 250px;
+    background-color: var(--cardcolor);
+    box-shadow: 0 2px 4px 0 var(--shadowcolor);
+    transition: transform 0.3s ease-in-out;
+}
+.countries:hover{
+    transform: scale(1.045);
+}
+
+
+.countries img{
+    width: 100%;
+}
+
+.text_value{
+    margin-top: 15px;
+    padding-inline: 12px;
+}
+.text_value h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.text_value p{
+    color: var(--cardtextcolor);
+    line-height: 30px;
+    
+}
+
+.region_text_color{
+    padding: 2px;
+    color: var(--regiontextcolor);
+    background-color: var(--regioncolor);
+}
+
+@media screen and (max-width: 470px){
+    .input_field{
+        align-items: center;
+        margin: 1.5rem 0;
+    }
+    body{
+        margin: 0;
+    }
+    .head{
+        justify-content: center;
+        gap: 25px;
+    }
+    .input_field .option_block {
+        font-size: 0.7rem;
+    }
+    .input_field .input_search{
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+    .navbar{
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
+
+    }
+    .countries{
+        width: 150px;
+    }
+    .text_value p{
+        line-height: 22px;
+        font-size: 0.7rem;
+    }
+    .text_value h3{
+        font-size: 18px;
+    }
+    .input_field .input_icon{
+        color: inherit;
+        background-color: inherit;
+    }
+    .search{
+        width: 85%;
+    }
+    .icon{
+        width: 15%;
+    }
+}
